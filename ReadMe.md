@@ -16,7 +16,7 @@ This game is a simple quiz game that combines image recognition and IoT technolo
   - Male-to-Male DuPont Line x9
   - carbon-film resistor x1
  ##### BreadBoard Layout:
-![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/Breadboard%20Layout.png)
+![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/ReadMe%20picture/Breadboard%20Layout.png)
 #### Software
   - onoff module for Node.js
   - socket.io module for Node.js
@@ -25,14 +25,14 @@ This game is a simple quiz game that combines image recognition and IoT technolo
 ---
   
 ### Get Pi Camera or Webcam Ready
-Camera is important for our project,You can insert webcam USB or Pi Camera.
+Camera is important for our project, you can insert webcam USB or Pi Camera.
 Here we use Pi Noir Camera for example.
-1. First, insert Noir Camera's cable line into Raspberry Pi port(blue part should face web port,like picture below)
-![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/Breadboard%20Layout.png)
-2. Then, to make camera available in Pi,install V4L2 driver into your Raspberry Pi
-* first download v4l-utils from [v4l-utils](https://github.com/Distrotech/v4l-utils) to your pi
-* follow [Official V4L2 driver](https://www.raspberrypi.org/forums/viewtopic.php?t=62364) tutorial to install V4L2 driver
-3. Create an html file, add below code to ckeck if camera can be detected
+1. First, insert Noir Camera's cable line into Raspberry Pi port (blue part should face web port, like picture below):
+![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/ReadMe%20picture/camera.jpg)
+2. Then, to make camera available in Pi, install V4L2 driver into your Raspberry Pi.
+* First download v4l-utils from [v4l-utils](https://github.com/Distrotech/v4l-utils) to your pi.
+* Follow [Official V4L2 driver](https://www.raspberrypi.org/forums/viewtopic.php?t=62364) tutorial to install V4L2 driver
+3. Create an html file, add below code to ckeck if camera can be detected:
 
 ```  
 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
@@ -100,7 +100,7 @@ pi@cathy:~/project $ cd socket.io
 ```
 pi@cathy:~/project/socket.io $ nano socket.io.js
 ```
-5. Go to following link [socket.io](https://cdnjs.com/libraries/socket.io) to copy the code, and paste to socket.io.js
+5. Go to following link [socket.io](https://cdnjs.com/libraries/socket.io) to copy the code, and paste to socket.io.js.
 
 ---
 ### Install onoff package
@@ -316,7 +316,7 @@ pi@cathy:~/project $ nano game.html
 ```
 pi@cathy:~/project $ nano webserver.js
 ```
-3. Copy following code to webserver.js:
+2. Copy following code to webserver.js:
 ```
 var http = require('http').createServer(handler); //require http server, and create server with function handler()
 var fs = require('fs'); //require filesystem module
@@ -444,17 +444,16 @@ io.sockets.on('connection', function (socket) {// WebSocket Connection
 });
 ```
 ---
-### Run Webserver And Start Our Game!
+### Run Webserver And Start Our Game
 
 1. Open command line, input below command to execute webserver:
 ```
 pi@cathy:~\project$ node webserver.js
 ```
-If command line display nothing, webserver is running, like below:
-![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/Breadboard%20Layout.png)
+If command line display nothing, webserver is running.
 
 2. Open game.html to start our game, You should see website like below:
-![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/Breadboard%20Layout.png)
+![image](https://github.com/cathy841106/IoT-Project-Quiz-Game/blob/master/ReadMe%20picture/run%20game.png)
 
 
 
